@@ -176,108 +176,73 @@
       </div>
 
     </section><!-- /Hero Section -->
-
-   
-
-         
-
-   <!-- Design Cards Section -->
-    <!-- Replace everything from the start of the About section to just before the Features Cards Section with the following: -->
-
-    <!-- Replace the entire Features Cards Section with the following Swiper carousel section -->
-
-<section id="features-cards" class="features-cards section" style="padding-top: 40px; padding-bottom: 40px;">
-  <div class="container-fluid px-0">
+    <!-- Replace the entire Features Cards Section with the following: -->
+<section id="features-cards" class="features-cards section">
+  <div class="container">
     <div class="row justify-content-center mb-4">
       <div class="col-12 text-center">
         <h2 class="mb-3">Explore Our Sample Designs</h2>
-        <p class="mb-0">Swipe or wait to see each design. Click a card to view a live demo.</p>
+        <p class="mb-0">Click a design to view a live demo.</p>
       </div>
     </div>
-    <div class="swiper design-swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="row g-0">
-            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-              <a href="./Design1/index.html" class="card text-decoration-none shadow-lg w-100" style="max-width: 100%; height: 420px; border-radius: 24px;">
-                <img src="./img/image1.png" class="card-img-top" alt="Design 1 Preview" style="height: 270px; object-fit: cover; border-top-left-radius: 24px; border-top-right-radius: 24px;">
-                <div class="card-body text-center">
-                  <h3 class="card-title mb-0">Design 1</h3>
-                </div>
-              </a>
-            </div>
-            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-              <a href="./Design2/index.html" class="card text-decoration-none shadow-lg w-100" style="max-width: 100%; height: 420px; border-radius: 24px;">
-                <img src="./img/image2.png" class="card-img-top" alt="Design 2 Preview" style="height: 270px; object-fit: cover; border-top-left-radius: 24px; border-top-right-radius: 24px;">
-                <div class="card-body text-center">
-                  <h3 class="card-title mb-0">Design 2</h3>
-                </div>
-              </a>
-            </div>
+    <div class="row g-4">
+      <div class="col-12 col-md-6">
+        <a href="./Design1/index.html" class="card text-decoration-none shadow-lg h-100">
+          <img src="./img/image1.png" class="card-img-top" alt="Design 1 Preview" style="height: 270px; object-fit: cover;">
+          <div class="card-body text-center">
+            <h3 class="card-title mb-0">Design 1</h3>
           </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="row g-0">
-            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-              <a href="./Design3/index.html" class="card text-decoration-none shadow-lg w-100" style="max-width: 100%; height: 420px; border-radius: 24px;">
-                <img src="./img/image3.png" class="card-img-top" alt="Design 3 Preview" style="height: 270px; object-fit: cover; border-top-left-radius: 24px; border-top-right-radius: 24px;">
-                <div class="card-body text-center">
-                  <h3 class="card-title mb-0">Design 3</h3>
-                </div>
-              </a>
-            </div>
-            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-              <a href="./Design4/index.html" class="card text-decoration-none shadow-lg w-100" style="max-width: 100%; height: 420px; border-radius: 24px;">
-                <img src="./img/image4.png" class="card-img-top" alt="Design 4 Preview" style="height: 270px; object-fit: cover; border-top-left-radius: 24px; border-top-right-radius: 24px;">
-                <div class="card-body text-center">
-                  <h3 class="card-title mb-0">Design 4</h3>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
+        </a>
       </div>
-      <div class="swiper-pagination mt-3"></div>
+      <div class="col-12 col-md-6">
+        <a href="./Design2/index.html" class="card text-decoration-none shadow-lg h-100">
+          <img src="./img/image2.png" class="card-img-top" alt="Design 2 Preview" style="height: 270px; object-fit: cover;">
+          <div class="card-body text-center">
+            <h3 class="card-title mb-0">Design 2</h3>
+          </div>
+        </a>
+      </div>
+      <div class="col-12 col-md-6">
+        <a href="./Design3/index.html" class="card text-decoration-none shadow-lg h-100">
+          <img src="./img/image3.png" class="card-img-top" alt="Design 3 Preview" style="height: 270px; object-fit: cover;">
+          <div class="card-body text-center">
+            <h3 class="card-title mb-0">Design 3</h3>
+          </div>
+        </a>
+      </div>
+      <div class="col-12 col-md-6">
+        <a href="./Design4/index.html" class="card text-decoration-none shadow-lg h-100">
+          <img src="./img/image4.png" class="card-img-top" alt="Design 4 Preview" style="height: 270px; object-fit: cover;">
+          <div class="card-body text-center">
+            <h3 class="card-title mb-0">Design 4</h3>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
   <style>
-    @media (min-width: 768px) {
-      #features-cards .swiper-slide .row {
-        width: 100vw;
-        margin-left: 0;
-        margin-right: 0;
-      }
-      #features-cards .card {
-        border-radius: 24px;
-        margin: 0 12px;
-      }
-    }
     #features-cards .card {
+      border-radius: 20px;
+      overflow: hidden;
+      min-height: 100%;
       transition: box-shadow 0.2s;
     }
     #features-cards .card:hover {
       box-shadow: 0 8px 32px rgba(0,0,0,0.15);
     }
-  </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      new Swiper('.design-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        loop: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      });
-    });
-  </script>
-</section>
-    <!-- /Design Cards Section -->
+    @media (min-width: 768px) {
+      #features-cards .card-img-top {
+        height: 270px;
+      }
+    }
+    @media (max-width: 767.98px) {
+      #features-cards .card-img-top {
+        height: 200px;
+      }
+    }
+    </style>
+    </section>
+    <!-- Design Cards Section -->
 
     <!-- Faq Section -->
     <section class="faq-9 faq section light-background" id="faq">
