@@ -26,6 +26,160 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Add this CSS in your <head> section, after your main.css link or in your custom CSS file -->
+<style>
+  body.dark-theme #bigCard,
+  body.dark-theme .header,
+  body.dark-theme .header .header-container,
+  body.dark-theme .navmenu {
+    background: #23272b !important;
+    color: #f1f3f4 !important;
+    border-bottom: 1px solid #23272b !important;
+  }
+  body.dark-theme .navmenu ul li a,
+  body.dark-theme .navmenu ul li .dropdown a,
+  body.dark-theme .navmenu .dropdown ul a {
+    color: #f1f3f4 !important;
+  }
+  body.dark-theme .navmenu ul li a.active,
+  body.dark-theme .navmenu ul li a:hover,
+  body.dark-theme .navmenu .dropdown ul a:hover {
+    color: #ffd700 !important;
+  }
+  body.dark-theme .navmenu .dropdown ul {
+    background: #23272b !important;
+  }
+  body.dark-theme .navmenu .dropdown ul li a {
+    color: #f1f3f4 !important;
+  }
+  body.dark-theme .navmenu .dropdown ul li a:hover {
+    color: #ffd700 !important;
+  }
+  body.dark-theme .mobile-nav-toggle {
+    color: #ffd700 !important;
+  }
+
+
+  body.dark-theme .stat-item {
+    background: #23272b !important;
+    color: #f1f3f4 !important;
+    border-radius: 18px;
+    border: 1px solid #23272b !important;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+  }
+  body.dark-theme .stat-item .stat-icon i {
+    color: #ffd700 !important;
+  }
+  body.dark-theme .stat-item h4,
+  body.dark-theme .stat-item p {
+    color: #f1f3f4 !important;
+  }
+
+
+
+  body.dark-theme {
+    background: #181a1b !important;
+    color: #f1f3f4 !important;
+  }
+  body.dark-theme .section,
+  body.dark-theme .container,
+  body.dark-theme .card,
+  
+  body.dark-theme .feature-box,
+  body.dark-theme .service-card,
+  body.dark-theme .faq-item,
+  body.dark-theme .footer,
+  body.dark-theme .contact-form,
+  body.dark-theme .info-box,
+  body.dark-theme .testimonial-item {
+    background: #23272b !important;
+    color: #f1f3f4 !important;
+    border-color: #23272b !important;
+  }
+  body.dark-theme .card-title,
+  body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4, body.dark-theme h5, body.dark-theme h6 {
+    color: #fff !important;
+  }
+  body.dark-theme .btn,
+  body.dark-theme .btn-primary,
+  body.dark-theme .btn-outline-secondary {
+    background: #23272b !important;
+    color: #f1f3f4 !important;
+    border-color: #444 !important;
+  }
+  body.dark-theme .btn:hover,
+  body.dark-theme .btn-primary:hover,
+  body.dark-theme .btn-outline-secondary:hover {
+    background: #444 !important;
+    color: #fff !important;
+    border-color: #666 !important;
+  }
+  body.dark-theme .navmenu,
+  body.dark-theme .header {
+    background: #23272b !important;
+  }
+  body.dark-theme .navmenu a,
+  body.dark-theme .navmenu .dropdown a {
+    color: #f1f3f4 !important;
+  }
+  body.dark-theme .navmenu a.active,
+  body.dark-theme .navmenu a:hover {
+    color: #ffd700 !important;
+  }
+  body.dark-theme .feature-box i,
+  body.dark-theme .service-card .icon,
+  body.dark-theme .feature-icon {
+    color: #ffd700 !important;
+  }
+  body.dark-theme .footer {
+    background: #23272b !important;
+    color: #f1f3f4 !important;
+  }
+  body.dark-theme .footer a {
+    color: #f1f3f4 !important;
+  }
+  body.dark-theme .form-control {
+    background: #23272b !important;
+    color: #f1f3f4 !important;
+    border-color: #444 !important;
+  }
+  body.dark-theme .form-control:focus {
+    background: #23272b !important;
+    color: #fff !important;
+    border-color: #ffd700 !important;
+  }
+  body.dark-theme .bi-moon {
+    color: #ffd700;
+  }
+  body.dark-theme .bi-sun {
+    color: #ffd700;
+  }
+
+
+
+
+  /* Add this to your CSS (preferably after your dark theme styles) */
+body.dark-theme .footer {
+  background: #23272b !important;
+  color: #f1f3f4 !important;
+  box-shadow: 0 -4px 32px -8px rgba(0,0,0,0.45), 0 -1px 0 0 #181a1b;
+ 
+  position: relative;
+  z-index: 2;
+}
+body.dark-theme .footer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+
+  background: linear-gradient(to bottom, #181a1b 0%, rgba(35,39,43,0) 100%);
+
+  z-index: -1;
+}
+</style>
 </head>
 
 <body class="index-page">
@@ -43,6 +197,7 @@
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#faq">FAQ</a></li>
+
           <li class="dropdown"><a href="#"><span>Sample Design</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="./Design1/index.html">Design 1</a></li>
@@ -65,6 +220,9 @@
       </nav>
 
       <a class="btn-getstarted" href="index.html#contact">Contact Us</a>
+      <button id="theme-toggle" class="btn btn-outline-secondary ms-3" aria-label="Toggle dark mode" style="border-radius: 50%; width: 40px; height: 40px;">
+    <i class="bi bi-moon"></i>
+  </button>
 
     </div>
   </header>
@@ -124,7 +282,7 @@
           </div>
         </div>
 
-        <div class="row stats-row gy-4 mt-5" data-aos="fade-up" data-aos-delay="500">
+        <div class="row stats-row gy-4 mt-5" data-aos="fade-up" data-aos-delay="500" id="bigCard">
           <div class="col-lg-3 col-md-6">
             <div class="stat-item">
               <div class="stat-icon">
@@ -516,6 +674,31 @@ Message: ${message}`;
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 
   <!-- Main JS File -->
+  <script>
+  // Theme toggle logic
+  const themeToggle = document.getElementById('theme-toggle');
+  const icon = themeToggle.querySelector('i');
+  function setTheme(dark) {
+    if (dark) {
+      document.body.classList.add('dark-theme');
+      icon.classList.remove('bi-moon');
+      icon.classList.add('bi-sun');
+    } else {
+      document.body.classList.remove('dark-theme');
+      icon.classList.remove('bi-sun');
+      icon.classList.add('bi-moon');
+    }
+  }
+  // Load theme from localStorage
+  const darkPref = localStorage.getItem('theme') === 'dark';
+  setTheme(darkPref);
+
+  themeToggle.addEventListener('click', function () {
+    const isDark = document.body.classList.toggle('dark-theme');
+    setTheme(isDark);
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+</script>
   <script src="assets/js/main.js"></script>
 
 </body>
