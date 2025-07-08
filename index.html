@@ -76,8 +76,6 @@
     color: #f1f3f4 !important;
   }
 
-
-
   body.dark-theme {
     background: #181a1b !important;
     color: #f1f3f4 !important;
@@ -156,9 +154,6 @@
     color: #ffd700;
   }
 
-
-
-
   /* Add this to your CSS (preferably after your dark theme styles) */
 body.dark-theme .footer {
   background: #23272b !important;
@@ -179,53 +174,120 @@ body.dark-theme .footer::before {
 
   z-index: -1;
 }
+ /* Hide Contact Us button on screens < 992px (Bootstrap's lg) */
+  .btn-getstarted.d-none.d-lg-inline-block {
+    display: none !important;
+  }
+  @media (min-width: 992px) {
+    .btn-getstarted.d-none.d-lg-inline-block {
+      display: inline-block !important;
+    }
+  }
+  /* Always keep theme toggle at the end right */
+  .header-container {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+  .header-container > .logo {
+    margin-right: auto !important;
+  }
+  #theme-toggle {
+    margin-left: 1rem;
+    order: 99;
+  }
+  @media (max-width: 991.98px) {
+    #theme-toggle {
+      margin-left: auto;
+      margin-right: 0;
+      order: 99;
+    }
+    .header-container {
+      gap: 0.25rem;
+    }
+  }
+
+  /* Add this CSS to your <head> or main CSS file, after your dark theme styles */
+
+/* Main mobile nav background and text color in dark theme */
+body.dark-theme .navmenu {
+  background: #23272b !important;
+}
+
+body.dark-theme .navmenu ul {
+  background: #23272b !important;
+}
+
+body.dark-theme .navmenu ul li a,
+body.dark-theme .navmenu ul li .dropdown a {
+  color: #f1f3f4 !important;
+}
+
+/* Dropdown menu background and border in dark theme */
+body.dark-theme .navmenu .dropdown ul {
+  background: #23272b !important;
+  border-color: #23272b !important;
+}
+
+body.dark-theme .navmenu .dropdown ul li a {
+  color: #f1f3f4 !important;
+}
+
+/* Active and hover states */
+body.dark-theme .navmenu ul li a.active,
+body.dark-theme .navmenu ul li a:hover,
+body.dark-theme .navmenu .dropdown ul li a:hover,
+body.dark-theme .navmenu .dropdown ul li a:focus {
+  color: #ffd700 !important;
+  background: #23272b !important;
+}
+
+/* Optional: style the mobile nav toggle icon */
+body.dark-theme .mobile-nav-toggle {
+  color: #ffd700 !important;
+}
+
+
 </style>
 </head>
 
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">CyberBanjara</h1>
-      </a>
+    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">CyberBanjara</h1>
+    </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#faq">FAQ</a></li>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#faq" class="active">FAQ</a></li>
+        <li class="dropdown"><a href="#"><span class="toggle-dropdown">Sample Design</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="./Design1/index.html">Design 1</a></li>
+            <li><a href="./Design2/index.html">Design 2</a></li>
+            <li><a href="./Design3/index.html">Design 3</a></li>
+            <li><a href="./Design4/index.html">Design 4</a></li>
+          </ul>
+        </li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
 
-          <li class="dropdown"><a href="#"><span>Sample Design</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="./Design1/index.html">Design 1</a></li>
-              <!-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li> -->
-              <li><a href="./Design2/index.html">Design 2</a></li>
-              <li><a href="./Design3/index.html">Design 3</a></li>
-              <li><a href="./Design4/index.html">Design 4</a></li>
-            </ul>
-          </li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+    <a class="btn-getstarted d-none d-lg-inline-block" href="index.html#contact">Contact Us</a>
+    <button id="theme-toggle" class="btn btn-outline-secondary ms-3 d-flex align-items-center justify-content-center" aria-label="Toggle dark mode" style="border-radius: 50%; width: 40px; height: 40px;">
+      <i class="bi bi-moon"></i>
+    </button>
 
-      <a class="btn-getstarted" href="index.html#contact">Contact Us</a>
-      <button id="theme-toggle" class="btn btn-outline-secondary ms-3" aria-label="Toggle dark mode" style="border-radius: 50%; width: 40px; height: 40px;">
-    <i class="bi bi-moon"></i>
-  </button>
+  </div>
+</header>
 
-    </div>
-  </header>
+
 
   <main class="main">
 
